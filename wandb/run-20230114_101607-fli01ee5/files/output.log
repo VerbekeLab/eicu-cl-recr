@@ -1,0 +1,56 @@
+[]
+args.client_id_list = None
+training_type != FEDML_TRAINING_PLATFORM_CROSS_DEVICE and training_type != FEDML_TRAINING_PLATFORM_CROSS_SILO
+bsize is 2
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:16:12] [INFO] [__init__.py:109:print_args] ==== args = {'yaml_config_file': '/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/distributed_training/config.yml', 'run_id': '0', 'rank': 0, 'local_rank': 0, 'node_rank': 0, 'role': 'client', 'yaml_paths': ['/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/distributed_training/config.yml'], 'training_type': 'simulation', 'random_seed': 0, 'dataset': 'ICU', 'data_cache_dir': '/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/eICU_Data/', 'partition_method': 'hetero', 'partition_alpha': 0.5, 'model': 'GRU', 'input_dim': 128, 'hidden_dim': 32, 'num_layers': 2, 'output_dim': 1, 'dropout_prob': 0.05, 'model_dir': '/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/distributed_training/', 'federated_optimizer': 'FedAvg', 'client_id_list': '[]', 'client_num_in_total': 5, 'client_num_per_round': 2, 'comm_round': 5, 'epochs': 2, 'batch_size': 2, 'client_optimizer': 'adamw', 'learning_rate': 0.005, 'weight_decay': 0.005, 'frequency_of_the_test': 1, 'using_gpu': False, 'gpu_id': 0, 'backend': 'sp', 'log_file_dir': '/Users/vscheltjens/fedml-server/fedml/logs', 'enable_wandb': True, 'wandb_key': '8d579c56c0eda8929353aac11d399b96e5aa9e71', 'wandb_entity': 'vs-health', 'wandb_project': 'federated_gru_eicu', 'worker_num': 2, 'sys_perf_profiling': True, 'config_version': 'release', 'current_running_dir': '/Users/vscheltjens/fedml-client', 'os_name': 'MacOS', 'version': 'release', 'device_id': '0xC02F52N9MD6R', 'cloud_region': '', 'mqtt_config_path': '', 's3_config_path': '', 'log_server_url': 'https://open.fedml.ai/fedmlLogsServer/logs/update'}
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:16:12] [INFO] [ml_engine_adapter.py:147:get_torch_device] args = <fedml.arguments.Arguments object at 0x7fab48040f70>, using_gpu = False, device_id = 0, device_type = cpu
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:16:12] [INFO] [device.py:48:get_device] device = cpu
+Loaded Global dataloaders
+81135 24698
+covered hospital 0
+covered hospital 1
+covered hospital 2
+covered hospital 3
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:18:02] [INFO] [fedavg_api.py:43:__init__] model = GRUModel(
+  (gru): GRU(128, 32, num_layers=2, batch_first=True, dropout=0.05)
+  (fc): Linear(in_features=32, out_features=1, bias=True)
+  (gru_dropout): Dropout(p=0.05, inplace=False)
+  (batch_norm): BatchNorm1d(1, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU()
+)
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:18:02] [INFO] [fedavg_api.py:46:__init__] self.model_trainer = <fedml.ml.trainer.icu_trainer.ModelTrainerICU object at 0x7fab588f4160>
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:18:02] [INFO] [fedavg_api.py:55:_setup_clients] ############setup_clients (START)#############
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:18:02] [INFO] [fedavg_api.py:67:_setup_clients] ############setup_clients (END)#############
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:18:02] [INFO] [fedavg_api.py:70:train] self.model_trainer = <fedml.ml.trainer.icu_trainer.ModelTrainerICU object at 0x7fab588f4160>
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:18:02] [INFO] [fedavg_api.py:77:train] ################Communication round : 0
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:18:02] [INFO] [fedavg_api.py:142:_client_sampling] client_indexes = [2 0]
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:18:02] [INFO] [fedavg_api.py:88:train] client_indexes = [2 0]
+covered hospital 4
+reached target point: model and data loaded -----> start training federated
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:18:07] [INFO] [fedavg_api.py:186:_local_test_on_all_clients] ################local_test_on_all_clients : 0
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:18:21] [INFO] [fedavg_api.py:240:_local_test_on_all_clients] {'train_MAE': 2.2005236819857963, 'training_loss': 0.6655124169420059}
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:18:21] [INFO] [fedavg_api.py:249:_local_test_on_all_clients] {'test_MAE': 2.3497103904335943, 'test_loss': 0.7274250181191864}
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:18:21] [INFO] [fedavg_api.py:77:train] ################Communication round : 1
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:18:21] [INFO] [fedavg_api.py:142:_client_sampling] client_indexes = [2 1]
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:18:21] [INFO] [fedavg_api.py:88:train] client_indexes = [2 1]
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:19:10] [INFO] [fedavg_api.py:186:_local_test_on_all_clients] ################local_test_on_all_clients : 1
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:19:24] [INFO] [fedavg_api.py:240:_local_test_on_all_clients] {'train_MAE': 1.8033971215880051, 'training_loss': 0.2570919773401085}
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:19:24] [INFO] [fedavg_api.py:249:_local_test_on_all_clients] {'test_MAE': 1.8476106935015504, 'test_loss': 0.26205347741631224}
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:19:24] [INFO] [fedavg_api.py:77:train] ################Communication round : 2
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:19:24] [INFO] [fedavg_api.py:142:_client_sampling] client_indexes = [2 4]
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:19:24] [INFO] [fedavg_api.py:88:train] client_indexes = [2 4]
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:19:34] [INFO] [fedavg_api.py:186:_local_test_on_all_clients] ################local_test_on_all_clients : 2
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:19:47] [INFO] [fedavg_api.py:240:_local_test_on_all_clients] {'train_MAE': 1.8167210694882567, 'training_loss': 0.25792277885249365}
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:19:47] [INFO] [fedavg_api.py:249:_local_test_on_all_clients] {'test_MAE': 1.838782147889161, 'test_loss': 0.26045895800285157}
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:19:47] [INFO] [fedavg_api.py:77:train] ################Communication round : 3
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:19:47] [INFO] [fedavg_api.py:142:_client_sampling] client_indexes = [3 4]
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:19:47] [INFO] [fedavg_api.py:88:train] client_indexes = [3 4]
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:19:54] [INFO] [fedavg_api.py:186:_local_test_on_all_clients] ################local_test_on_all_clients : 3
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:20:07] [INFO] [fedavg_api.py:240:_local_test_on_all_clients] {'train_MAE': 1.8288950850008898, 'training_loss': 0.2593999408199662}
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:20:07] [INFO] [fedavg_api.py:249:_local_test_on_all_clients] {'test_MAE': 1.8694797180616647, 'test_loss': 0.26352019772775315}
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:20:07] [INFO] [fedavg_api.py:77:train] ################Communication round : 4
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:20:07] [INFO] [fedavg_api.py:142:_client_sampling] client_indexes = [0 3]
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:20:07] [INFO] [fedavg_api.py:88:train] client_indexes = [0 3]
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:20:10] [INFO] [fedavg_api.py:186:_local_test_on_all_clients] ################local_test_on_all_clients : 4
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:20:24] [INFO] [fedavg_api.py:240:_local_test_on_all_clients] {'train_MAE': 1.7639933545087807, 'training_loss': 0.2560154656746909}
+[FedML-Server(0) @device-id-0] [Sat, 14 Jan 2023 10:20:24] [INFO] [fedavg_api.py:249:_local_test_on_all_clients] {'test_MAE': 1.7757185584222595, 'test_loss': 0.25572374850635615}

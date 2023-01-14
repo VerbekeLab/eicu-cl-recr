@@ -1,0 +1,213 @@
+2023-01-14 14:19:00,563 INFO    StreamThr :83767 [internal.py:wandb_internal():90] W&B internal server running at pid: 83767, started at: 2023-01-14 14:19:00.561736
+2023-01-14 14:19:00,565 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: status
+2023-01-14 14:19:00,567 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: status
+2023-01-14 14:19:00,569 DEBUG   SenderThread:83767 [sender.py:send():302] send: header
+2023-01-14 14:19:00,569 INFO    WriterThread:83767 [datastore.py:open_for_write():75] open: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/run-2am0oncp.wandb
+2023-01-14 14:19:00,588 DEBUG   SenderThread:83767 [sender.py:send():302] send: run
+2023-01-14 14:19:01,602 INFO    SenderThread:83767 [dir_watcher.py:__init__():216] watching files in: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files
+2023-01-14 14:19:01,602 INFO    SenderThread:83767 [sender.py:_start_run_threads():913] run started: 2am0oncp with start time 1673702340.549473
+2023-01-14 14:19:01,606 DEBUG   SenderThread:83767 [sender.py:send():302] send: summary
+2023-01-14 14:19:01,607 INFO    SenderThread:83767 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2023-01-14 14:19:01,610 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: check_version
+2023-01-14 14:19:01,610 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: check_version
+2023-01-14 14:19:02,030 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: run_start
+2023-01-14 14:19:02,031 DEBUG   HandlerThread:83767 [meta.py:__init__():35] meta init
+2023-01-14 14:19:02,031 DEBUG   HandlerThread:83767 [meta.py:__init__():50] meta init done
+2023-01-14 14:19:02,031 DEBUG   HandlerThread:83767 [meta.py:probe():216] probe
+2023-01-14 14:19:02,042 DEBUG   HandlerThread:83767 [meta.py:_setup_git():206] setup git
+2023-01-14 14:19:02,067 DEBUG   HandlerThread:83767 [meta.py:_setup_git():213] setup git done
+2023-01-14 14:19:02,068 DEBUG   HandlerThread:83767 [meta.py:_save_pip():54] save pip
+2023-01-14 14:19:02,068 DEBUG   HandlerThread:83767 [meta.py:_save_pip():68] save pip done
+2023-01-14 14:19:02,068 DEBUG   HandlerThread:83767 [meta.py:_save_conda():75] save conda
+2023-01-14 14:19:02,608 INFO    Thread-12 :83767 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/wandb-summary.json
+2023-01-14 14:19:02,608 INFO    Thread-12 :83767 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/requirements.txt
+2023-01-14 14:19:02,608 INFO    Thread-12 :83767 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/conda-environment.yaml
+2023-01-14 14:19:05,288 DEBUG   HandlerThread:83767 [meta.py:_save_conda():85] save conda done
+2023-01-14 14:19:05,289 DEBUG   HandlerThread:83767 [meta.py:probe():254] probe done
+2023-01-14 14:19:05,294 DEBUG   SenderThread:83767 [sender.py:send():302] send: files
+2023-01-14 14:19:05,295 INFO    SenderThread:83767 [sender.py:_save_file():1156] saving file wandb-metadata.json with policy now
+2023-01-14 14:19:05,303 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-14 14:19:05,304 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: stop_status
+2023-01-14 14:19:05,616 INFO    Thread-12 :83767 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/conda-environment.yaml
+2023-01-14 14:19:05,616 INFO    Thread-12 :83767 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/wandb-metadata.json
+2023-01-14 14:19:05,767 DEBUG   SenderThread:83767 [sender.py:send():302] send: telemetry
+2023-01-14 14:19:06,494 INFO    Thread-16 :83767 [upload_job.py:push():138] Uploaded file /var/folders/bx/9yqb63rn12q7pnj8xkwtx0f00000gn/T/tmpzcqf94qgwandb/1fovvzpi-wandb-metadata.json
+2023-01-14 14:19:06,617 INFO    Thread-12 :83767 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/output.log
+2023-01-14 14:19:08,625 INFO    Thread-12 :83767 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/output.log
+2023-01-14 14:19:20,775 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-14 14:19:20,776 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: stop_status
+2023-01-14 14:19:30,776 DEBUG   SenderThread:83767 [sender.py:send():302] send: stats
+2023-01-14 14:19:31,685 INFO    Thread-12 :83767 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/config.yaml
+2023-01-14 14:19:38,818 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-14 14:19:38,818 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: stop_status
+2023-01-14 14:19:48,728 INFO    Thread-12 :83767 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/output.log
+2023-01-14 14:19:54,322 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-14 14:19:54,322 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: stop_status
+2023-01-14 14:20:00,763 INFO    Thread-12 :83767 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/output.log
+2023-01-14 14:20:01,598 DEBUG   SenderThread:83767 [sender.py:send():302] send: stats
+2023-01-14 14:20:09,893 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-14 14:20:09,893 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: stop_status
+2023-01-14 14:20:16,813 INFO    Thread-12 :83767 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/output.log
+2023-01-14 14:20:25,391 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-14 14:20:25,391 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: stop_status
+2023-01-14 14:20:30,849 INFO    Thread-12 :83767 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/output.log
+2023-01-14 14:20:32,425 DEBUG   SenderThread:83767 [sender.py:send():302] send: stats
+2023-01-14 14:20:41,336 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-14 14:20:41,336 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: stop_status
+2023-01-14 14:20:44,885 INFO    Thread-12 :83767 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/output.log
+2023-01-14 14:20:56,846 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-14 14:20:56,847 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: stop_status
+2023-01-14 14:20:56,907 INFO    Thread-12 :83767 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/output.log
+2023-01-14 14:21:03,215 DEBUG   SenderThread:83767 [sender.py:send():302] send: stats
+2023-01-14 14:21:09,953 INFO    Thread-12 :83767 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/output.log
+2023-01-14 14:21:12,324 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-14 14:21:12,324 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: stop_status
+2023-01-14 14:21:23,989 INFO    Thread-12 :83767 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/output.log
+2023-01-14 14:21:27,781 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-14 14:21:27,781 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: stop_status
+2023-01-14 14:21:34,052 DEBUG   SenderThread:83767 [sender.py:send():302] send: stats
+2023-01-14 14:21:38,032 INFO    Thread-12 :83767 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/output.log
+2023-01-14 14:21:44,032 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-14 14:21:44,032 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: stop_status
+2023-01-14 14:21:54,079 INFO    Thread-12 :83767 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/output.log
+2023-01-14 14:21:59,531 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: stop_status
+2023-01-14 14:21:59,531 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: stop_status
+2023-01-14 14:22:04,832 DEBUG   SenderThread:83767 [sender.py:send():302] send: stats
+2023-01-14 14:22:07,120 INFO    Thread-12 :83767 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/output.log
+2023-01-14 14:22:07,436 DEBUG   SenderThread:83767 [sender.py:send():302] send: exit
+2023-01-14 14:22:07,436 INFO    SenderThread:83767 [sender.py:send_exit():438] handling exit code: 0
+2023-01-14 14:22:07,437 INFO    SenderThread:83767 [sender.py:send_exit():440] handling runtime: 185
+2023-01-14 14:22:07,437 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: poll_exit
+2023-01-14 14:22:07,438 INFO    SenderThread:83767 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2023-01-14 14:22:07,438 INFO    SenderThread:83767 [sender.py:send_exit():446] send defer
+2023-01-14 14:22:07,438 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: poll_exit
+2023-01-14 14:22:07,439 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: defer
+2023-01-14 14:22:07,439 INFO    HandlerThread:83767 [handler.py:handle_request_defer():164] handle defer: 0
+2023-01-14 14:22:07,439 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: defer
+2023-01-14 14:22:07,439 INFO    SenderThread:83767 [sender.py:send_request_defer():455] handle sender defer: 0
+2023-01-14 14:22:07,439 INFO    SenderThread:83767 [sender.py:transition_state():459] send defer: 1
+2023-01-14 14:22:07,440 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: defer
+2023-01-14 14:22:07,440 INFO    HandlerThread:83767 [handler.py:handle_request_defer():164] handle defer: 1
+2023-01-14 14:22:07,482 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: defer
+2023-01-14 14:22:07,482 INFO    SenderThread:83767 [sender.py:send_request_defer():455] handle sender defer: 1
+2023-01-14 14:22:07,482 INFO    SenderThread:83767 [sender.py:transition_state():459] send defer: 2
+2023-01-14 14:22:07,482 DEBUG   SenderThread:83767 [sender.py:send():302] send: stats
+2023-01-14 14:22:07,483 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: defer
+2023-01-14 14:22:07,483 INFO    HandlerThread:83767 [handler.py:handle_request_defer():164] handle defer: 2
+2023-01-14 14:22:07,483 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: defer
+2023-01-14 14:22:07,483 INFO    SenderThread:83767 [sender.py:send_request_defer():455] handle sender defer: 2
+2023-01-14 14:22:07,483 INFO    SenderThread:83767 [sender.py:transition_state():459] send defer: 3
+2023-01-14 14:22:07,483 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: defer
+2023-01-14 14:22:07,483 INFO    HandlerThread:83767 [handler.py:handle_request_defer():164] handle defer: 3
+2023-01-14 14:22:07,483 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: defer
+2023-01-14 14:22:07,483 INFO    SenderThread:83767 [sender.py:send_request_defer():455] handle sender defer: 3
+2023-01-14 14:22:07,483 INFO    SenderThread:83767 [sender.py:transition_state():459] send defer: 4
+2023-01-14 14:22:07,484 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: defer
+2023-01-14 14:22:07,484 INFO    HandlerThread:83767 [handler.py:handle_request_defer():164] handle defer: 4
+2023-01-14 14:22:07,484 DEBUG   SenderThread:83767 [sender.py:send():302] send: summary
+2023-01-14 14:22:07,484 INFO    SenderThread:83767 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2023-01-14 14:22:07,484 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: defer
+2023-01-14 14:22:07,485 INFO    SenderThread:83767 [sender.py:send_request_defer():455] handle sender defer: 4
+2023-01-14 14:22:07,485 INFO    SenderThread:83767 [sender.py:transition_state():459] send defer: 5
+2023-01-14 14:22:07,485 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: defer
+2023-01-14 14:22:07,485 INFO    HandlerThread:83767 [handler.py:handle_request_defer():164] handle defer: 5
+2023-01-14 14:22:07,485 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: defer
+2023-01-14 14:22:07,485 INFO    SenderThread:83767 [sender.py:send_request_defer():455] handle sender defer: 5
+2023-01-14 14:22:07,485 INFO    SenderThread:83767 [sender.py:transition_state():459] send defer: 6
+2023-01-14 14:22:07,485 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: defer
+2023-01-14 14:22:07,485 INFO    HandlerThread:83767 [handler.py:handle_request_defer():164] handle defer: 6
+2023-01-14 14:22:07,485 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: defer
+2023-01-14 14:22:07,486 INFO    SenderThread:83767 [sender.py:send_request_defer():455] handle sender defer: 6
+2023-01-14 14:22:07,542 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: poll_exit
+2023-01-14 14:22:08,125 INFO    Thread-12 :83767 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/wandb-summary.json
+2023-01-14 14:22:08,125 INFO    Thread-12 :83767 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/output.log
+2023-01-14 14:22:08,409 INFO    SenderThread:83767 [sender.py:transition_state():459] send defer: 7
+2023-01-14 14:22:08,409 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: poll_exit
+2023-01-14 14:22:08,410 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: defer
+2023-01-14 14:22:08,410 INFO    HandlerThread:83767 [handler.py:handle_request_defer():164] handle defer: 7
+2023-01-14 14:22:08,410 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: defer
+2023-01-14 14:22:08,411 INFO    SenderThread:83767 [sender.py:send_request_defer():455] handle sender defer: 7
+2023-01-14 14:22:08,411 INFO    SenderThread:83767 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-01-14 14:22:08,516 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: poll_exit
+2023-01-14 14:22:09,129 INFO    Thread-12 :83767 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/output.log
+2023-01-14 14:22:09,130 INFO    SenderThread:83767 [dir_watcher.py:finish():392] scan: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files
+2023-01-14 14:22:09,130 INFO    SenderThread:83767 [dir_watcher.py:finish():406] scan save: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/requirements.txt requirements.txt
+2023-01-14 14:22:09,130 INFO    SenderThread:83767 [dir_watcher.py:finish():406] scan save: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/output.log output.log
+2023-01-14 14:22:09,133 INFO    SenderThread:83767 [dir_watcher.py:finish():406] scan save: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/config.yaml config.yaml
+2023-01-14 14:22:09,136 INFO    SenderThread:83767 [dir_watcher.py:finish():406] scan save: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/wandb-summary.json wandb-summary.json
+2023-01-14 14:22:09,139 INFO    SenderThread:83767 [dir_watcher.py:finish():406] scan save: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/conda-environment.yaml conda-environment.yaml
+2023-01-14 14:22:09,143 INFO    SenderThread:83767 [dir_watcher.py:finish():406] scan save: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/wandb-metadata.json wandb-metadata.json
+2023-01-14 14:22:09,143 INFO    SenderThread:83767 [sender.py:transition_state():459] send defer: 8
+2023-01-14 14:22:09,144 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: poll_exit
+2023-01-14 14:22:09,146 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: defer
+2023-01-14 14:22:09,147 INFO    HandlerThread:83767 [handler.py:handle_request_defer():164] handle defer: 8
+2023-01-14 14:22:09,148 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: defer
+2023-01-14 14:22:09,148 INFO    SenderThread:83767 [sender.py:send_request_defer():455] handle sender defer: 8
+2023-01-14 14:22:09,148 INFO    SenderThread:83767 [file_pusher.py:finish():171] shutting down file pusher
+2023-01-14 14:22:09,249 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: poll_exit
+2023-01-14 14:22:09,250 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: poll_exit
+2023-01-14 14:22:09,355 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: poll_exit
+2023-01-14 14:22:09,356 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: poll_exit
+2023-01-14 14:22:09,461 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: poll_exit
+2023-01-14 14:22:09,461 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: poll_exit
+2023-01-14 14:22:09,567 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: poll_exit
+2023-01-14 14:22:09,568 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: poll_exit
+2023-01-14 14:22:09,674 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: poll_exit
+2023-01-14 14:22:09,674 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: poll_exit
+2023-01-14 14:22:09,778 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: poll_exit
+2023-01-14 14:22:09,779 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: poll_exit
+2023-01-14 14:22:09,884 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: poll_exit
+2023-01-14 14:22:09,884 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: poll_exit
+2023-01-14 14:22:09,990 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: poll_exit
+2023-01-14 14:22:09,990 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: poll_exit
+2023-01-14 14:22:10,095 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: poll_exit
+2023-01-14 14:22:10,095 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: poll_exit
+2023-01-14 14:22:10,201 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: poll_exit
+2023-01-14 14:22:10,202 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: poll_exit
+2023-01-14 14:22:10,306 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: poll_exit
+2023-01-14 14:22:10,307 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: poll_exit
+2023-01-14 14:22:10,317 INFO    Thread-21 :83767 [upload_job.py:push():138] Uploaded file /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/conda-environment.yaml
+2023-01-14 14:22:10,319 INFO    Thread-18 :83767 [upload_job.py:push():138] Uploaded file /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/output.log
+2023-01-14 14:22:10,321 INFO    Thread-19 :83767 [upload_job.py:push():138] Uploaded file /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/config.yaml
+2023-01-14 14:22:10,323 INFO    Thread-17 :83767 [upload_job.py:push():138] Uploaded file /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/requirements.txt
+2023-01-14 14:22:10,411 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: poll_exit
+2023-01-14 14:22:10,412 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: poll_exit
+2023-01-14 14:22:10,449 INFO    Thread-20 :83767 [upload_job.py:push():138] Uploaded file /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/files/wandb-summary.json
+2023-01-14 14:22:10,518 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: poll_exit
+2023-01-14 14:22:10,518 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: poll_exit
+2023-01-14 14:22:10,621 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: poll_exit
+2023-01-14 14:22:10,621 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: poll_exit
+2023-01-14 14:22:10,654 INFO    Thread-11 (_thread_body):83767 [sender.py:transition_state():459] send defer: 9
+2023-01-14 14:22:10,654 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: defer
+2023-01-14 14:22:10,655 INFO    HandlerThread:83767 [handler.py:handle_request_defer():164] handle defer: 9
+2023-01-14 14:22:10,655 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: defer
+2023-01-14 14:22:10,655 INFO    SenderThread:83767 [sender.py:send_request_defer():455] handle sender defer: 9
+2023-01-14 14:22:10,723 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: poll_exit
+2023-01-14 14:22:11,371 INFO    SenderThread:83767 [sender.py:transition_state():459] send defer: 10
+2023-01-14 14:22:11,371 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: poll_exit
+2023-01-14 14:22:11,372 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: defer
+2023-01-14 14:22:11,372 INFO    HandlerThread:83767 [handler.py:handle_request_defer():164] handle defer: 10
+2023-01-14 14:22:11,373 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: defer
+2023-01-14 14:22:11,373 INFO    SenderThread:83767 [sender.py:send_request_defer():455] handle sender defer: 10
+2023-01-14 14:22:11,373 INFO    SenderThread:83767 [sender.py:transition_state():459] send defer: 11
+2023-01-14 14:22:11,374 DEBUG   SenderThread:83767 [sender.py:send():302] send: final
+2023-01-14 14:22:11,375 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: defer
+2023-01-14 14:22:11,375 INFO    HandlerThread:83767 [handler.py:handle_request_defer():164] handle defer: 11
+2023-01-14 14:22:11,375 DEBUG   SenderThread:83767 [sender.py:send():302] send: footer
+2023-01-14 14:22:11,375 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: defer
+2023-01-14 14:22:11,375 INFO    SenderThread:83767 [sender.py:send_request_defer():455] handle sender defer: 11
+2023-01-14 14:22:11,477 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: poll_exit
+2023-01-14 14:22:11,478 DEBUG   SenderThread:83767 [sender.py:send_request():316] send_request: poll_exit
+2023-01-14 14:22:11,478 INFO    SenderThread:83767 [file_pusher.py:join():176] waiting for file pusher
+2023-01-14 14:22:12,517 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: sampled_history
+2023-01-14 14:22:12,519 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: get_summary
+2023-01-14 14:22:12,519 INFO    MainThread:83767 [wandb_run.py:_footer_history_summary_info():3305] rendering history
+2023-01-14 14:22:12,519 INFO    MainThread:83767 [wandb_run.py:_footer_history_summary_info():3337] rendering summary
+2023-01-14 14:22:12,520 INFO    MainThread:83767 [wandb_run.py:_footer_sync_info():3261] logging synced files
+2023-01-14 14:22:12,521 DEBUG   HandlerThread:83767 [handler.py:handle_request():141] handle_request: shutdown
+2023-01-14 14:22:12,521 INFO    HandlerThread:83767 [handler.py:finish():810] shutting down handler
+2023-01-14 14:22:13,377 INFO    WriterThread:83767 [datastore.py:close():279] close: /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230114_141900-2am0oncp/run-2am0oncp.wandb
+2023-01-14 14:22:13,417 INFO    SenderThread:83767 [sender.py:finish():1312] shutting down sender
+2023-01-14 14:22:13,417 INFO    SenderThread:83767 [file_pusher.py:finish():171] shutting down file pusher
+2023-01-14 14:22:13,418 INFO    SenderThread:83767 [file_pusher.py:join():176] waiting for file pusher
+2023-01-14 14:22:13,868 INFO    MainThread:83767 [internal.py:handle_exit():80] Internal process exited

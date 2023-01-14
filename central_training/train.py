@@ -1,6 +1,7 @@
 
 import time
 import torch
+import wandb
 from datetime import datetime
 
 from torch.utils.data import DataLoader
@@ -24,20 +25,20 @@ def train(args):
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
 
     #data loaders
-    path = args.get('path')
+    path = args.data_cache_dir
 
-    train_set = eICU_Loader(path + 'train') #this is just for local testing ############################ update to train
-    train_loader = DataLoader(train_set, args.get('bsize'), shuffle=True, drop_last=True)
+    train_set = eICU_Loader(path + 'val') 
+    train_loader = DataLoader(train_set, args.batch_size, shuffle=True, drop_last=False)
     
     valid_set = eICU_Loader(path + 'val')
-    valid_loader = DataLoader(valid_set, args.get('bsize'), shuffle=True, drop_last=True)
+    valid_loader = DataLoader(valid_set, args.batch_size, shuffle=True, drop_last=False)
 
     #model, optimizer and loss
-    model = GRUModel(args.get('input_dim'), args.get('hidden_dim'), args.get('num_layers'), args.get('output_dim'), args.get('dropout_prob')).to(device)
-    optimizer = torch.optim.AdamW(model.parameters(), lr=args.get('lr') , weight_decay=args.get('wd'))
+    model = GRUModel(args.input_dim, args.hidden_dim, args.num_layers, args.output_dim, args.dropout_prob).to(device)
+    optimizer = torch.optim.AdamW(model.parameters(), lr=args.learning_rate , weight_decay=args.weight_decay)
     loss_fn = MSLELoss()
 
-    for epoch in range(args.get('epochs')):
+    for epoch in range(args.central_epochs):
         #track epoch level time
         start_time = time.time()
 
@@ -56,20 +57,21 @@ def train(args):
         validation_loss.append(v_loss); validation_metrics.append(v_metrics)
 
         #store epoch level model
-        save_model(args, model, timestamp, epoch+1)
+        save_model(args, model, timestamp)
 
         #track time
         print('Training for epoch {} took: {}'.format(epoch+1, time.time() - start_time))
 
-        #TODO
-        # -- check the early stopping criteria 
-        # -- log to wandb
+        wandb.log({
+            'epoch': epoch,
+            'train_loss': t_loss,
+            'valid_loss': v_loss,
+            'train_mae': t_metrics[0],
+            'valid_mae': v_metrics[0],
+        }) 
     
-    #write to csv -> better to do this per epoch not to lose information when training is interupted
+    #write to csv
     store_metrics(args, timestamp, train_loss, train_metrics, validation_loss, validation_metrics)
-
-    #TODO
-    # -- run against test
 
 
 def train_epoch(model, loss_fn, optimizer, data_loader, epoch_n):

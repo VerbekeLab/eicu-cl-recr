@@ -1,0 +1,24 @@
+{
+    "os": "macOS-10.16-x86_64-i386-64bit",
+    "python": "3.10.8",
+    "heartbeatAt": "2023-01-13T21:31:24.014996",
+    "startedAt": "2023-01-13T21:31:22.574282",
+    "docker": null,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [
+        "--cf",
+        "/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/distributed_training/config.yml"
+    ],
+    "state": "running",
+    "program": "-m distributed_training.federated",
+    "git": {
+        "remote": "https://github.com/vscheltjens/eicu-cl-req.git",
+        "commit": "ebdd65fb0dd46cef0cca1a8395263fadb7d8c535"
+    },
+    "email": "90703953+vscheltjens@users.noreply.github.com",
+    "root": "/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req",
+    "host": "Vincents-MacBook-Pro.local",
+    "username": "vscheltjens",
+    "executable": "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/bin/python"
+}

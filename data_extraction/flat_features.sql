@@ -13,7 +13,7 @@
 drop materialized view if exists flat cascade;
 create materialized view flat as
   -- for some reason lots of multiple records are produced, the distinct gets rid of these
-  select distinct la.patientunitstayid, p.gender, p.age, p.ethnicity, p.admissionheight, p.admissionweight, -- here is where we will add p.hospitalid
+  select distinct la.patientunitstayid, p.gender, p.age, p.ethnicity, p.admissionheight, p.admissionweight, p.hospitalid, -- here is where we will add p.hospitalid
     p.apacheadmissiondx, extract(hour from to_timestamp(p.unitadmittime24,'HH24:MI:SS')) as hour, p.unittype,
     p.unitadmitsource, p.unitstaytype, apr.physicianspeciality, aps.intubated, aps.vent, aps.dialysis, aps.eyes,
     aps.motor, aps.verbal, aps.meds
