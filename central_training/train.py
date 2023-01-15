@@ -27,7 +27,7 @@ def train(args):
     #data loaders
     path = args.data_cache_dir
 
-    train_set = eICU_Loader(path + 'val') 
+    train_set = eICU_Loader(path + 'train') 
     train_loader = DataLoader(train_set, args.batch_size, shuffle=True, drop_last=False)
     
     valid_set = eICU_Loader(path + 'val')

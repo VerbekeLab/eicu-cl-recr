@@ -29,14 +29,15 @@ if __name__=='__main__':
 
     '''
     #get the args from yaml as a dict for wandb
-    config = load_yaml_config(cf_args.yaml_config_file)
-    
-    set_api_key(args.wandb_key)
-    wandb.init(project=args.central_wandb_project, config=config)
+    # config = load_yaml_config(cf_args.yaml_config_file)
     
     #Overwrite argument to specify central training
     args.central_training = 1
     print(f' argument for central training {args.central_training}')
+
+    set_api_key(args.wandb_key)
+    wandb.init(project=args.central_wandb_project)
+    wandb.config.update(args)
 
     # call the train function
     print('Training started')

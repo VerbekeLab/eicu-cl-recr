@@ -4,7 +4,7 @@ common_args:
 
 data_args:
   dataset: "ICU"
-  data_cache_dir: "/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/eICU_Data/"
+  data_cache_dir: "/data/leuven/345/vsc34578/eicu-cl-req/eICU_Data/"
   partition_method: "hetero"
   partition_alpha: 0.5
 
@@ -15,8 +15,8 @@ model_args:
   num_layers: 2
   output_dim: 1
   dropout_prob: 0.05
-  dist_model_dir: "/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/distributed_training/"
-  central_model_dir: "/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/central_training/"
+  dist_model_dir: "/data/leuven/345/vsc34578/eicu-cl-req/distributed_training/"
+  central_model_dir: "/data/leuven/345/vsc34578/eicu-cl-req/central_training/"
 
 train_args:
   federated_optimizer: "FedAvg"
