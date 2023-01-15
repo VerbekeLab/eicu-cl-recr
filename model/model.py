@@ -33,9 +33,15 @@ class GRUModel(nn.Module):
         outputs, _ = self.gru(inputs, self.hidden.detach())       
             
         out = self.gru_dropout(outputs)
-        out = self.fc(out[:, -1, :])               
-        out = self.batch_norm(out)                
-        out = self.relu(out)
+        out = self.fc(out[:, -1, :])
+
+        print(len(inputs))
+
+        if len(inputs) < 2:
+            out = self.relu(out)
+        else:    
+            out = self.batch_norm(out)                
+            out = self.relu(out)
 
         return out
 
