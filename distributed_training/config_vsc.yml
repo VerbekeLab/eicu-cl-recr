@@ -32,7 +32,7 @@ train_args:
   recruitment: False
 
 central_training_args:
-  central_epochs: 1
+  central_epochs: 15
 
 validation_args:
   frequency_of_the_test: 1
