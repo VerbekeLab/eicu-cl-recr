@@ -1,0 +1,27 @@
+2023-01-16 20:44:07,805 INFO    MainThread:11318 [wandb_setup.py:_flush():76] Configure stats pid to 11318
+2023-01-16 20:44:07,805 INFO    MainThread:11318 [wandb_setup.py:_flush():76] Loading settings from /Users/vscheltjens/.config/wandb/settings
+2023-01-16 20:44:07,805 INFO    MainThread:11318 [wandb_setup.py:_flush():76] Loading settings from /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/settings
+2023-01-16 20:44:07,805 INFO    MainThread:11318 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'_require_service': 'True'}
+2023-01-16 20:44:07,805 WARNING MainThread:11318 [wandb_setup.py:_flush():76] Could not find program at -m distributed_training.federated
+2023-01-16 20:44:07,806 INFO    MainThread:11318 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': None, 'program': '-m distributed_training.federated'}
+2023-01-16 20:44:07,806 INFO    MainThread:11318 [wandb_init.py:_log_setup():461] Logging user logs to /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230116_204407-2rmuwi4t/logs/debug.log
+2023-01-16 20:44:07,806 INFO    MainThread:11318 [wandb_init.py:_log_setup():462] Logging internal logs to /Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/wandb/run-20230116_204407-2rmuwi4t/logs/debug-internal.log
+2023-01-16 20:44:07,806 INFO    MainThread:11318 [wandb_init.py:init():495] calling init triggers
+2023-01-16 20:44:07,806 INFO    MainThread:11318 [wandb_init.py:init():498] wandb.init called with sweep_config: {}
+config: {'yaml_config_file': '/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/distributed_training/config.yml', 'run_id': '0', 'rank': 0, 'local_rank': 0, 'node_rank': 0, 'role': 'client', 'central_training': 0, 'yaml_paths': ['/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/distributed_training/config.yml'], 'training_type': 'simulation', 'random_seed': 0, 'dataset': 'ICU', 'data_cache_dir': '/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/eICU_Data/', 'partition_method': 'hetero', 'partition_alpha': 0.5, 'model': 'GRU', 'input_dim': 128, 'hidden_dim': 32, 'num_layers': 2, 'output_dim': 1, 'dropout_prob': 0.05, 'dist_model_dir': '/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/distributed_training/', 'central_model_dir': '/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/central_training/', 'federated_optimizer': 'FedAvg', 'client_id_list': '[]', 'client_num_in_total': 10, 'client_num_per_round': 3, 'comm_round': 5, 'epochs': 2, 'batch_size': 128, 'client_optimizer': 'adamw', 'learning_rate': 0.005, 'weight_decay': 0.005, 'recruitment': True, 'div_weight': 0.5, 'inst_weight': 0.5, 'central_epochs': 15, 'frequency_of_the_test': 1, 'using_gpu': False, 'gpu_id': 0, 'backend': 'sp', 'log_file_dir': './log', 'enable_wandb': True, 'wandb_key': '8d579c56c0eda8929353aac11d399b96e5aa9e71', 'wandb_entity': 'vs-health', 'wandb_project': 'federated_gru_eicu', 'central_wandb_project': 'recr_central_training', 'worker_num': 3, 'sys_perf_profiling': True}
+2023-01-16 20:44:07,806 INFO    MainThread:11318 [wandb_init.py:init():548] starting backend
+2023-01-16 20:44:07,807 INFO    MainThread:11318 [wandb_init.py:init():552] setting up manager
+2023-01-16 20:44:07,820 INFO    MainThread:11318 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2023-01-16 20:44:07,825 INFO    MainThread:11318 [wandb_init.py:init():558] backend started and connected
+2023-01-16 20:44:07,837 INFO    MainThread:11318 [wandb_init.py:init():636] updated telemetry
+2023-01-16 20:44:07,857 INFO    MainThread:11318 [wandb_init.py:init():667] communicating run to backend with 30 second timeout
+2023-01-16 20:44:09,593 INFO    MainThread:11318 [wandb_run.py:_on_init():1982] communicating current version
+2023-01-16 20:44:10,133 INFO    MainThread:11318 [wandb_run.py:_on_init():1986] got version response upgrade_message: "wandb version 0.13.9 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-01-16 20:44:10,133 INFO    MainThread:11318 [wandb_init.py:init():700] starting run threads in backend
+2023-01-16 20:44:13,219 INFO    MainThread:11318 [wandb_run.py:_console_start():1962] atexit reg
+2023-01-16 20:44:13,220 INFO    MainThread:11318 [wandb_run.py:_redirect():1820] redirect: SettingsConsole.WRAP_RAW
+2023-01-16 20:44:13,220 INFO    MainThread:11318 [wandb_run.py:_redirect():1885] Wrapping output streams.
+2023-01-16 20:44:13,220 INFO    MainThread:11318 [wandb_run.py:_redirect():1907] Redirects installed.
+2023-01-16 20:44:13,221 INFO    MainThread:11318 [wandb_init.py:init():732] run started, returning control to user process
+2023-01-16 20:45:10,152 WARNING MsgRouterThr:11318 [router.py:message_loop():76] message_loop has been closed

@@ -3,6 +3,7 @@ import os
 import torch
 import yaml
 import wandb
+import joblib
 import numpy as np
 import pandas as pd
 import torch.nn as nn
@@ -130,26 +131,42 @@ def load_icu_data(args, train_path, test_path):
     train_data_global = train_loader
     test_data_global = test_loader
     
-    #Local data is a dict
-    # this is deprecated: train_data_local_num_dict 
-    train_data_local_num_dict = {}
-    train_data_local_dict = {}
-    test_data_local_dict = {}
 
-    for client_idx in range(args.client_num_in_total):
-        #this assumes that the hospital id is index 0 - len(clients)
-        #check bsize, local data needs to be sufficient
-        local_train_set = train_set = eICU_Loader(train_path, client_idx)
-        local_test_set = eICU_Loader(test_path, client_idx)
+    if not os.path.exists(args.data_cache_dir + 'hosp_dicts'):
+        os.mkdir(args.data_cache_dir + 'hosp_dicts')
 
-        local_train_loader = DataLoader(local_train_set, args.batch_size, shuffle=True, drop_last=False)
-        local_test_loader = DataLoader(local_test_set, args.batch_size, shuffle=True, drop_last=False)
+        #Local data is a dict
+        # this is deprecated: train_data_local_num_dict 
+        train_data_local_num_dict = {}
+        train_data_local_dict = {}
+        test_data_local_dict = {}
 
-        train_data_local_num_dict[client_idx] = len(local_train_set)
-        train_data_local_dict[client_idx] = local_train_loader
-        test_data_local_dict[client_idx] = local_test_loader
+        print('Generating hospital level data: ')
+        for client_idx in range(args.client_num_in_total):
+            #this assumes that the hospital id is index 0 - len(clients)
+            #check bsize, local data needs to be sufficient
+            local_train_set = train_set = eICU_Loader(train_path, client_idx)
+            local_test_set = eICU_Loader(test_path, client_idx)
 
-        print(f'covered hospital {client_idx}')
+            local_train_loader = DataLoader(local_train_set, args.batch_size, shuffle=True, drop_last=False)
+            local_test_loader = DataLoader(local_test_set, args.batch_size, shuffle=True, drop_last=False)
+
+            train_data_local_num_dict[client_idx] = len(local_train_set)
+            train_data_local_dict[client_idx] = local_train_loader
+            test_data_local_dict[client_idx] = local_test_loader
+
+            print(f'Generating hospital level data for hospital: {client_idx}/{args.client_num_in_total}')
+        
+        joblib.dump(train_data_local_num_dict, args.data_cache_dir + 'hosp_dicts/local_num')
+        joblib.dump(train_data_local_dict, args.data_cache_dir + 'hosp_dicts/local_train')
+        joblib.dump(test_data_local_dict, args.data_cache_dir + 'hosp_dicts/local_test')
+
+    else:
+        print('Loading previously stored local training data')
+
+        train_data_local_num_dict = joblib.load(args.data_cache_dir + 'hosp_dicts/local_num')
+        train_data_local_dict = joblib.load(args.data_cache_dir + 'hosp_dicts/local_train')
+        test_data_local_dict = joblib.load(args.data_cache_dir + 'hosp_dicts/local_test')
 
     return (
         client_num,

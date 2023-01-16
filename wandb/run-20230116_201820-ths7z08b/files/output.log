@@ -1,0 +1,115 @@
+[]
+args.client_id_list = None
+training_type != FEDML_TRAINING_PLATFORM_CROSS_DEVICE and training_type != FEDML_TRAINING_PLATFORM_CROSS_SILO
+bsize is 128
+[FedML-Server(0) @device-id-0] [Mon, 16 Jan 2023 20:18:26] [INFO] [__init__.py:109:print_args] ==== args = {'yaml_config_file': '/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/distributed_training/config.yml', 'run_id': '0', 'rank': 0, 'local_rank': 0, 'node_rank': 0, 'role': 'client', 'central_training': 0, 'yaml_paths': ['/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/distributed_training/config.yml'], 'training_type': 'simulation', 'random_seed': 0, 'dataset': 'ICU', 'data_cache_dir': '/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/eICU_Data/', 'partition_method': 'hetero', 'partition_alpha': 0.5, 'model': 'GRU', 'input_dim': 128, 'hidden_dim': 32, 'num_layers': 2, 'output_dim': 1, 'dropout_prob': 0.05, 'dist_model_dir': '/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/distributed_training/', 'central_model_dir': '/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/central_training/', 'federated_optimizer': 'FedAvg', 'client_id_list': '[]', 'client_num_in_total': 10, 'client_num_per_round': 3, 'comm_round': 5, 'epochs': 2, 'batch_size': 128, 'client_optimizer': 'adamw', 'learning_rate': 0.005, 'weight_decay': 0.005, 'recruitment': True, 'div_weight': 0.5, 'inst_weight': 0.5, 'central_epochs': 15, 'frequency_of_the_test': 1, 'using_gpu': False, 'gpu_id': 0, 'backend': 'sp', 'log_file_dir': '/Users/vscheltjens/fedml-server/fedml/logs', 'enable_wandb': True, 'wandb_key': '8d579c56c0eda8929353aac11d399b96e5aa9e71', 'wandb_entity': 'vs-health', 'wandb_project': 'federated_gru_eicu', 'central_wandb_project': 'recr_central_training', 'worker_num': 3, 'sys_perf_profiling': True, 'config_version': 'release', 'current_running_dir': '/Users/vscheltjens/fedml-client', 'os_name': 'MacOS', 'version': 'release', 'device_id': '0xC02F52N9MD6R', 'cloud_region': '', 'mqtt_config_path': '', 's3_config_path': '', 'log_server_url': 'https://open.fedml.ai/fedmlLogsServer/logs/update'}
+[FedML-Server(0) @device-id-0] [Mon, 16 Jan 2023 20:18:26] [INFO] [ml_engine_adapter.py:147:get_torch_device] args = <fedml.arguments.Arguments object at 0x7f8990040f70>, using_gpu = False, device_id = 0, device_type = cpu
+[FedML-Server(0) @device-id-0] [Mon, 16 Jan 2023 20:18:26] [INFO] [device.py:48:get_device] device = cpu
+Loaded Global dataloaders
+81135 24698
+Loading previously stored local training data
+ global dist: 1.0
+ local dist: [0.         0.59333333 0.22666667 0.04666667 0.07333333 0.03333333
+ 0.01333333 0.00666667 0.00666667 0.        ]
+local div: 9.0
+ local dist: [0.         0.42096927 0.2245803  0.11941717 0.06145074 0.04529617
+ 0.024707   0.02312322 0.05384859 0.02660754]
+local div: 9.0
+ local dist: [0.         0.52162162 0.2        0.0972973  0.05675676 0.01621622
+ 0.01621622 0.01891892 0.04594595 0.02702703]
+local div: 9.0
+ local dist: [0.         0.48113208 0.22641509 0.09433962 0.01886792 0.05660377
+ 0.03773585 0.04716981 0.03773585 0.        ]
+local div: 9.0
+ local dist: [0.         0.39243499 0.22458629 0.12529551 0.07092199 0.05200946
+ 0.03309693 0.0141844  0.05200946 0.03546099]
+local div: 9.0
+ local dist: [0.         0.53974895 0.20502092 0.07531381 0.08368201 0.0209205
+ 0.0209205  0.0251046  0.0167364  0.0125523 ]
+local div: 9.0
+ local dist: [0.         0.48591549 0.16197183 0.09859155 0.07042254 0.04225352
+ 0.02816901 0.04225352 0.04225352 0.02816901]
+local div: 9.0
+ local dist: [0.         0.36206897 0.26724138 0.12068966 0.10344828 0.02586207
+ 0.04310345 0.02586207 0.04310345 0.00862069]
+local div: 9.0
+ local dist: [0.         0.46987952 0.20481928 0.09638554 0.08433735 0.05421687
+ 0.02409639 0.01204819 0.04819277 0.0060241 ]
+local div: 9.0
+ local dist: [0.         0.54696133 0.24309392 0.09944751 0.04972376 0.01657459
+ 0.01104972 0.00552486 0.02762431 0.        ]
+local div: 9.0
+0 150 9.0
+1 3157 9.0
+2 370 9.0
+3 106 9.0
+4 423 9.0
+5 239 9.0
+6 142 9.0
+7 116 9.0
+8 166 9.0
+9 181 9.0
+The sorted dict
+{1: 4.508898825966348, 4: 4.524310831916316, 2: 4.525993762245502, 5: 4.532342311367658, 9: 4.537164707312359, 8: 4.538807526285317, 0: 4.540824829046386, 6: 4.541959067914834, 7: 4.546423834544263, 3: 4.548564293117863}
+[FedML-Server(0) @device-id-0] [Mon, 16 Jan 2023 20:19:08] [INFO] [fedavg_api.py:43:__init__] model = GRUModel(
+  (gru): GRU(128, 32, num_layers=2, batch_first=True, dropout=0.05)
+  (fc): Linear(in_features=32, out_features=1, bias=True)
+  (gru_dropout): Dropout(p=0.05, inplace=False)
+  (batch_norm): BatchNorm1d(1, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU()
+)
+[FedML-Server(0) @device-id-0] [Mon, 16 Jan 2023 20:19:08] [INFO] [fedavg_api.py:46:__init__] self.model_trainer = <fedml.ml.trainer.icu_trainer.ModelTrainerICU object at 0x7f899b7a4520>
+[FedML-Server(0) @device-id-0] [Mon, 16 Jan 2023 20:19:08] [INFO] [fedavg_api.py:55:_setup_clients] ############setup_clients (START)#############
+[FedML-Server(0) @device-id-0] [Mon, 16 Jan 2023 20:19:08] [INFO] [fedavg_api.py:67:_setup_clients] ############setup_clients (END)#############
+[FedML-Server(0) @device-id-0] [Mon, 16 Jan 2023 20:19:08] [INFO] [fedavg_api.py:70:train] self.model_trainer = <fedml.ml.trainer.icu_trainer.ModelTrainerICU object at 0x7f899b7a4520>
+[FedML-Server(0) @device-id-0] [Mon, 16 Jan 2023 20:19:08] [INFO] [fedavg_api.py:77:train] ################Communication round : 0
+[FedML-Server(0) @device-id-0] [Mon, 16 Jan 2023 20:19:08] [INFO] [fedavg_api.py:142:_client_sampling] client_indexes = [2 8 4]
+[FedML-Server(0) @device-id-0] [Mon, 16 Jan 2023 20:19:08] [INFO] [fedavg_api.py:88:train] client_indexes = [2 8 4]
+Traceback (most recent call last):
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/distributed_training/federated.py", line 32, in <module>
+    simulator.run()
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/fedml/runner.py", line 123, in run
+    self.runner.run()
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/fedml/simulation/simulator.py", line 67, in run
+    self.fl_trainer.train()
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/fedml/simulation/sp/fedavg/fedavg_api.py", line 102, in train
+    w = client.train(copy.deepcopy(w_global))
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/fedml/simulation/sp/fedavg/client.py", line 26, in train
+    self.model_trainer.train(self.local_training_data, self.device, self.args)
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/fedml/ml/trainer/icu_trainer.py", line 48, in train
+    for i, batch in enumerate(train_data):
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 671, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 58, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 58, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/model/utils.py", line 72, in __getitem__
+    x = self.data[self.data.index == patient]
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/pandas/core/frame.py", line 3796, in __getitem__
+    return self._getitem_bool_array(key)
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/pandas/core/frame.py", line 3851, in _getitem_bool_array
+    return self._take_with_is_copy(indexer, axis=0)
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/pandas/core/generic.py", line 3902, in _take_with_is_copy
+    result = self._take(indices=indices, axis=axis)
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/pandas/core/generic.py", line 3886, in _take
+    new_data = self._mgr.take(
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/pandas/core/internals/managers.py", line 980, in take
+    return self.reindex_indexer(
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/pandas/core/internals/managers.py", line 753, in reindex_indexer
+    new_blocks = [
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/pandas/core/internals/managers.py", line 754, in <listcomp>
+    blk.take_nd(
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/pandas/core/internals/blocks.py", line 880, in take_nd
+    new_values = algos.take_nd(
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/pandas/core/array_algos/take.py", line 117, in take_nd
+    return _take_nd_ndarray(arr, indexer, axis, fill_value, allow_fill)
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/pandas/core/array_algos/take.py", line 163, in _take_nd_ndarray
+    func(arr, indexer, out, fill_value)
+KeyboardInterrupt

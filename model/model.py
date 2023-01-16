@@ -35,8 +35,6 @@ class GRUModel(nn.Module):
         out = self.gru_dropout(outputs)
         out = self.fc(out[:, -1, :])
 
-        print(len(inputs))
-
         if len(inputs) < 2:
             out = self.relu(out)
         else:    

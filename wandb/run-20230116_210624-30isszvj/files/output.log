@@ -1,0 +1,113 @@
+[]
+args.client_id_list = None
+training_type != FEDML_TRAINING_PLATFORM_CROSS_DEVICE and training_type != FEDML_TRAINING_PLATFORM_CROSS_SILO
+bsize is 128
+[FedML-Server(0) @device-id-0] [Mon, 16 Jan 2023 21:06:30] [INFO] [__init__.py:109:print_args] ==== args = {'yaml_config_file': '/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/distributed_training/config.yml', 'run_id': '0', 'rank': 0, 'local_rank': 0, 'node_rank': 0, 'role': 'client', 'central_training': 0, 'yaml_paths': ['/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/distributed_training/config.yml'], 'training_type': 'simulation', 'random_seed': 0, 'dataset': 'ICU', 'data_cache_dir': '/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/eICU_Data/', 'partition_method': 'hetero', 'partition_alpha': 0.5, 'model': 'GRU', 'input_dim': 128, 'hidden_dim': 32, 'num_layers': 2, 'output_dim': 1, 'dropout_prob': 0.05, 'dist_model_dir': '/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/distributed_training/', 'central_model_dir': '/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/central_training/', 'federated_optimizer': 'FedAvg', 'client_id_list': '[]', 'client_num_in_total': 10, 'client_num_per_round': 3, 'comm_round': 5, 'epochs': 2, 'batch_size': 128, 'client_optimizer': 'adamw', 'learning_rate': 0.005, 'weight_decay': 0.005, 'recruitment': True, 'div_weight': 0.5, 'inst_weight': 0.5, 'central_epochs': 15, 'frequency_of_the_test': 1, 'using_gpu': False, 'gpu_id': 0, 'backend': 'sp', 'log_file_dir': '/Users/vscheltjens/fedml-server/fedml/logs', 'enable_wandb': True, 'wandb_key': '8d579c56c0eda8929353aac11d399b96e5aa9e71', 'wandb_entity': 'vs-health', 'wandb_project': 'federated_gru_eicu', 'central_wandb_project': 'recr_central_training', 'worker_num': 3, 'sys_perf_profiling': True, 'config_version': 'release', 'current_running_dir': '/Users/vscheltjens/fedml-client', 'os_name': 'MacOS', 'version': 'release', 'device_id': '0xC02F52N9MD6R', 'cloud_region': '', 'mqtt_config_path': '', 's3_config_path': '', 'log_server_url': 'https://open.fedml.ai/fedmlLogsServer/logs/update'}
+[FedML-Server(0) @device-id-0] [Mon, 16 Jan 2023 21:06:30] [INFO] [ml_engine_adapter.py:147:get_torch_device] args = <fedml.arguments.Arguments object at 0x7f8c70190f70>, using_gpu = False, device_id = 0, device_type = cpu
+[FedML-Server(0) @device-id-0] [Mon, 16 Jan 2023 21:06:30] [INFO] [device.py:48:get_device] device = cpu
+Loaded Global dataloaders
+81135 24698
+Loading previously stored local training data
+out bins [ 0. 89. 34.  7. 11.  5.  2.  1.  1.  0.]
+out bins [   0. 1329.  709.  377.  194.  143.   78.   73.  170.   84.]
+out bins [  0. 193.  74.  36.  21.   6.   6.   7.  17.  10.]
+out bins [ 0. 51. 24. 10.  2.  6.  4.  5.  4.  0.]
+out bins [  0. 166.  95.  53.  30.  22.  14.   6.  22.  15.]
+out bins [  0. 129.  49.  18.  20.   5.   5.   6.   4.   3.]
+out bins [ 0. 69. 23. 14. 10.  6.  4.  6.  6.  4.]
+out bins [ 0. 42. 31. 14. 12.  3.  5.  3.  5.  1.]
+out bins [ 0. 78. 34. 16. 14.  9.  4.  2.  8.  1.]
+out bins [ 0. 99. 44. 18.  9.  3.  2.  1.  5.  0.]
+glob - loc dist [ 0.         -0.14877888 -0.00547855  0.06481848 -0.00937294  0.00785479
+  0.01122112  0.01511551  0.04125413  0.02336634]
+local div: 2.0816681711721685e-17
+glob - loc dist [ 0.          0.02358518 -0.00339218 -0.00793202  0.00250965 -0.00410805
+ -0.00015254 -0.00134104 -0.0059278  -0.0032412 ]
+local div: 3.122502256758253e-17
+glob - loc dist [ 0.         -0.07706717  0.02118812  0.01418785  0.00720364  0.0249719
+  0.00833824  0.00286326  0.00197485 -0.00366069]
+local div: 1.3877787807814457e-17
+glob - loc dist [ 0.         -0.03657762 -0.00522698  0.01714553  0.04509247 -0.01541565
+ -0.01318139 -0.02538763  0.01018494  0.02336634]
+local div: 0.0
+glob - loc dist [ 0.          0.05211947 -0.00339817 -0.01381036 -0.00696159 -0.01082134
+ -0.00854247  0.00759778 -0.00408866 -0.01209466]
+local div: 2.0816681711721685e-17
+glob - loc dist [ 0.         -0.0951945   0.0161672   0.03617134 -0.01972161  0.02026762
+  0.00363395 -0.00332242  0.03118439  0.01081404]
+local div: 1.214306433183765e-17
+glob - loc dist [ 0.         -0.04136104  0.05921629  0.0128936  -0.00646214 -0.0010654
+ -0.00361456 -0.02047134  0.00566727 -0.00480268]
+local div: 6.938893903907228e-18
+glob - loc dist [ 0.          0.08248549 -0.04605326 -0.00920451 -0.03948788  0.01532605
+ -0.01854899 -0.00407989  0.00481734  0.01474565]
+local div: 2.42861286636753e-17
+glob - loc dist [ 0.         -0.02532506  0.01636884  0.01509961 -0.02037695 -0.01302875
+  0.00045807  0.00973399 -0.00027198  0.01734224]
+local div: 3.469446951953614e-18
+glob - loc dist [ 0.         -0.10240687 -0.0219058   0.01203763  0.01423664  0.02461353
+  0.01350473  0.01625732  0.02029648  0.02336634]
+local div: 2.0816681711721685e-17
+0 150 2.0816681711721685e-17
+1 3157 3.122502256758253e-17
+2 370 1.3877787807814457e-17
+3 106 0.0
+4 423 2.0816681711721685e-17
+5 239 1.214306433183765e-17
+6 142 6.938893903907228e-18
+7 116 2.42861286636753e-17
+8 166 3.469446951953614e-18
+9 181 2.0816681711721685e-17
+The sorted dict
+{1: 0.008898825966347907, 4: 0.02431083191631577, 2: 0.025993762245501824, 5: 0.03234231136765755, 9: 0.037164707312358325, 8: 0.03880752628531664, 0: 0.04082482904638632, 6: 0.04195906791483446, 7: 0.04642383454426298, 3: 0.04856429311786321}
+[FedML-Server(0) @device-id-0] [Mon, 16 Jan 2023 21:07:15] [INFO] [fedavg_api.py:43:__init__] model = GRUModel(
+  (gru): GRU(128, 32, num_layers=2, batch_first=True, dropout=0.05)
+  (fc): Linear(in_features=32, out_features=1, bias=True)
+  (gru_dropout): Dropout(p=0.05, inplace=False)
+  (batch_norm): BatchNorm1d(1, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU()
+)
+[FedML-Server(0) @device-id-0] [Mon, 16 Jan 2023 21:07:15] [INFO] [fedavg_api.py:46:__init__] self.model_trainer = <fedml.ml.trainer.icu_trainer.ModelTrainerICU object at 0x7f8c0434c670>
+[FedML-Server(0) @device-id-0] [Mon, 16 Jan 2023 21:07:15] [INFO] [fedavg_api.py:55:_setup_clients] ############setup_clients (START)#############
+[FedML-Server(0) @device-id-0] [Mon, 16 Jan 2023 21:07:15] [INFO] [fedavg_api.py:67:_setup_clients] ############setup_clients (END)#############
+[FedML-Server(0) @device-id-0] [Mon, 16 Jan 2023 21:07:15] [INFO] [fedavg_api.py:70:train] self.model_trainer = <fedml.ml.trainer.icu_trainer.ModelTrainerICU object at 0x7f8c0434c670>
+[FedML-Server(0) @device-id-0] [Mon, 16 Jan 2023 21:07:15] [INFO] [fedavg_api.py:77:train] ################Communication round : 0
+[FedML-Server(0) @device-id-0] [Mon, 16 Jan 2023 21:07:15] [INFO] [fedavg_api.py:142:_client_sampling] client_indexes = [2 8 4]
+[FedML-Server(0) @device-id-0] [Mon, 16 Jan 2023 21:07:15] [INFO] [fedavg_api.py:88:train] client_indexes = [2 8 4]
+[FedML-Server(0) @device-id-0] [Mon, 16 Jan 2023 21:07:17] [INFO] [fedavg_api.py:186:_local_test_on_all_clients] ################local_test_on_all_clients : 0
+Traceback (most recent call last):
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/distributed_training/federated.py", line 32, in <module>
+    simulator.run()
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/fedml/runner.py", line 123, in run
+    self.runner.run()
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/fedml/simulation/simulator.py", line 67, in run
+    self.fl_trainer.train()
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/fedml/simulation/sp/fedavg/fedavg_api.py", line 123, in train
+    self._local_test_on_all_clients(round_idx)
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/fedml/simulation/sp/fedavg/fedavg_api.py", line 219, in _local_test_on_all_clients
+    test_local_metrics = client.local_test(True)
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/fedml/simulation/sp/fedavg/client.py", line 35, in local_test
+    metrics = self.model_trainer.test(test_data, self.device, self.args)
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/fedml/ml/trainer/icu_trainer.py", line 87, in test
+    for i, batch in enumerate(test_data):
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 671, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 58, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 58, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/Users/vscheltjens/Documents/PhD/Projects/eicu-cl-req/model/utils.py", line 72, in __getitem__
+    x = self.data[self.data.index == patient]
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/pandas/core/frame.py", line 3796, in __getitem__
+    return self._getitem_bool_array(key)
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/pandas/core/frame.py", line 3851, in _getitem_bool_array
+    return self._take_with_is_copy(indexer, axis=0)
+  File "/usr/local/Caskroom/miniconda/base/envs/fed-cl-req-dev/lib/python3.10/site-packages/pandas/core/generic.py", line 3894, in _take_with_is_copy
+    def _take_with_is_copy(self: NDFrameT, indices, axis=0) -> NDFrameT:
+KeyboardInterrupt

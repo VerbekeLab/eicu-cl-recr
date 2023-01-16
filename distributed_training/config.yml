@@ -21,7 +21,7 @@ model_args:
 train_args:
   federated_optimizer: "FedAvg"
   client_id_list: "[]"
-  client_num_in_total: 5
+  client_num_in_total: 10
   client_num_per_round: 3
   comm_round: 5
   epochs: 2
@@ -29,7 +29,12 @@ train_args:
   client_optimizer: adamw
   learning_rate: 0.005
   weight_decay: 0.005
-  recruitment: False
+
+cl_recruitment_args:
+  recruitment: True
+  div_weight: 0.5
+  inst_weight: 0.5
+  repr_perc: 0.2
 
 central_training_args:
   central_epochs: 15
