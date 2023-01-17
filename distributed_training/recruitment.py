@@ -75,7 +75,7 @@ def update_dataset_args(args, client_list, dataset):
     ) = dataset
 
     args.client_num_in_total = len(client_list)
-    args.client_num_per_round = len(client_list) #this needs to have some more flexibility
+    args.client_num_per_round = round(len(client_list)*args.cl_num) 
 
     local_num_dict = {}
     train_dict = {}

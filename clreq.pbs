@@ -17,6 +17,6 @@ export PATH="${VSC_DATA}/miniconda3/bin:${PATH}"
 
 source activate clreq
 
-python -m central_training.central --cf '/data/leuven/345/vsc34578/eicu-cl-req/distributed_training/config_vsc.yml'
+python -m distributed_training.federated --cf '/data/leuven/345/vsc34578/eicu-cl-req/distributed_training/config_vsc.yml'
 
 echo Finished

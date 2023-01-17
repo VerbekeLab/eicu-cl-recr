@@ -35,6 +35,7 @@ cl_recruitment_args:
   div_weight: 0.5
   inst_weight: 0.5
   repr_perc: 0.2
+  cl_num: 0.1
 
 central_training_args:
   central_epochs: 15
@@ -54,5 +55,5 @@ tracking_args:
   enable_wandb: True
   wandb_key: 8d579c56c0eda8929353aac11d399b96e5aa9e71
   wandb_entity: vs-health
-  wandb_project: federated_gru_eicu
+  wandb_project: recr_federated_training_recr_sel_cl
   central_wandb_project: recr_central_training
