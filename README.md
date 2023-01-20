@@ -1,5 +1,12 @@
 # Client Recruitment for Federated Learning in eICU LoS prediction
- 
+
+## Important
+The FedML dependency for this work requires the FedML package to be installed from the forked repository. The source code is changed to allow for federated training and metric reporting specifically for the regression setting as required for eICU Length of Stay predictions (LoS). Installation can be done using pip as follows:
+
+    ```
+    python -m pip install 'git+https://github.com/vscheltjens/FedML.git@master#subdirectory=python'
+    ```
+
 ## Installing the dataset
 In this work the publicly available eICU dataset was used as it contains hospital identifiers allowing to map data to the originating hospital, an interesting feature to simulate a (near) real-world environment for federated learning of a neural network.
 
