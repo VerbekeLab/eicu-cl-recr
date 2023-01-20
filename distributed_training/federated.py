@@ -18,14 +18,14 @@ if __name__ == "__main__":
 
     if args.recruitment:
         client_list = cl_recruitment(args, dataset)
-    #     args, dataset = update_dataset_args(args, client_list, dataset)
+        args, dataset = update_dataset_args(args, client_list, dataset)
 
-    # # load model (the size of MNIST image is 28 x 28)
-    # model = GRUModel(args.input_dim, args.hidden_dim, args.num_layers, args.output_dim, args.dropout_prob)
+    # load model (the size of MNIST image is 28 x 28)
+    model = GRUModel(args.input_dim, args.hidden_dim, args.num_layers, args.output_dim, args.dropout_prob)
     
-    # # start training
-    # simulator = FedMLRunner(args, device, dataset, model)
-    # simulator.run()
+    # start training
+    simulator = FedMLRunner(args, device, dataset, model)
+    simulator.run()
 
-    # #run against test
-    # test(args, central=False)
+    #run against test
+    test(args, central=False)

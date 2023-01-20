@@ -1,5 +1,12 @@
 #Mac OS Files
 .DS_Store
 
+#Other
+.clreq.pbs
+.scrap.ipynb
+
 #Data Folders
 eICU_Data/
+wandb/
+figrues/
+toy-implementation/
