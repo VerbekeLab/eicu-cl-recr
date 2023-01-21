@@ -57,4 +57,3 @@ tracking_args:
   wandb_entity: vs-health
   wandb_project: recr_federated_training_recr_sel_cl
   central_wandb_project: recr_central_training
-  
