@@ -32,7 +32,7 @@ train_args:
 
 cl_recruitment_args:
   recruitment: True
-  div_weight: 1000000000000000
+  div_weight: 0.5
   inst_weight: 0.5
   repr_perc: 0.2
   cl_num: 0.1
