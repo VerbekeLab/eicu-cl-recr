@@ -5,6 +5,7 @@
 clreq.pbs
 scrap.ipynb
 wandbkey.txt
+distributed_training/config_vsc.yml
 
 
 #Data Folders
