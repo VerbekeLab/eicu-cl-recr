@@ -10,7 +10,8 @@ def preprocess_flat(flat):
     # admission diagnosis is dealt with in diagnoses.py not flat features
     flat.drop(columns=['apacheadmissiondx'], inplace=True)
 
-    flat['gender'].replace({'Male': 1, 'Female': 0}, inplace=True)
+    flat['gender'].replace({'Male': 1.0, 'Female': 0.0, '0': 0.0, '1': 1.0, '1.0': 1.0, '0.0': 0.0, 'Unknown': 0.5, 'Other': 0.5}, inplace=True)
+
     # convert the categorical features to one-hot
     flat = pd.get_dummies(flat, columns=['ethnicity', 'unittype', 'unitadmitsource', 'unitstaytype',
                                          'physicianspeciality'])
@@ -56,6 +57,7 @@ def flat_and_labels_main(eICU_path):
     flat = pd.read_csv(eICU_path + 'flat_features.csv')
     flat = preprocess_flat(flat)
     labels = pd.read_csv(eICU_path + 'labels.csv')
+    labels = labels.drop_duplicates()
     labels = preprocess_labels(labels)
 
     print('==> Saving finalised preprocessed labels and flat features...')

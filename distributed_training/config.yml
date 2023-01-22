@@ -53,7 +53,7 @@ comm_args:
 tracking_args:
   log_file_dir: ./log
   enable_wandb: True
-  wandb_key: 
+  wandb_key: 8d579c56c0eda8929353aac11d399b96e5aa9e71
   wandb_entity: vs-health
-  wandb_project: recr_federated_training_recr_sel_cl
+  wandb_project: recr_federated_training_test
   central_wandb_project: recr_central_training

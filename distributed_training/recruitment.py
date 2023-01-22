@@ -123,7 +123,7 @@ def local_dist_divergence(global_output_dist, total_inst, recr_stats_local):
 
     for key, (local_dist, local_inst) in recr_stats_local.items():
         local_dist_norm = local_dist/local_inst
-        local_divergence = abs(sum((global_output_dist_norm - local_dist_norm)))
+        local_divergence = sum(abs((global_output_dist_norm - local_dist_norm)))
         recr_stats_local[key] = (local_dist, local_inst, local_divergence)
     
     return recr_stats_local
@@ -132,10 +132,12 @@ def representativeness(args, recr_stats_local):
     cl_rep = {}
 
     for key, (_, inst, divergence) in recr_stats_local.items():
+        print(key, divergence, inst)
         div_w = args.div_weight
         inst_w = args.inst_weight
         c_rp = (div_w*divergence)+(inst_w*(inst**-0.5))
         cl_rep[key] = c_rp
+        print(key, divergence, inst, c_rp)
 
     sorted_cl = dict(sorted(cl_rep.items(), key=lambda item: item[1])) 
 

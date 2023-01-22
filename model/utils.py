@@ -39,12 +39,12 @@ class eICU_Loader(Dataset):
         labels.drop(columns=['index'])
 
         # fix gendeer in static -> this should be done elsewhere
-        static.gender = static.gender.replace('0', 0.0, regex=True)
-        static.gender = static.gender.replace('1', 1.0, regex=True)
-        static.gender = static.gender.replace('1.0', 1.0, regex=True)
-        static.gender = static.gender.replace('0.0', 0.0, regex=True)
-        static.gender = static.gender.replace('Unknown', 0.5, regex=True)
-        static.gender = static.gender.replace('Other', 0.5, regex=True)
+        # static.gender = static.gender.replace('0', 0.0, regex=True)
+        # static.gender = static.gender.replace('1', 1.0, regex=True)
+        # static.gender = static.gender.replace('1.0', 1.0, regex=True)
+        # static.gender = static.gender.replace('0.0', 0.0, regex=True)
+        # static.gender = static.gender.replace('Unknown', 0.5, regex=True)
+        # static.gender = static.gender.replace('Other', 0.5, regex=True)
         static.gender = static.gender.fillna(0.5)
 
         # merge the data
