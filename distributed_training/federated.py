@@ -1,4 +1,5 @@
 import fedml
+import numpy as np
 from fedml import FedMLRunner
 
 from model.model import GRUModel
@@ -9,6 +10,11 @@ from distributed_training.recruitment import cl_recruitment, update_dataset_args
 if __name__ == "__main__":
     # init FedML framework
     args = fedml.init()
+
+    if not args.client_selection_seed:
+        rng = np.random.default_rng(seed=None)
+        rseed = int(rng.integers(123456789, size=1))
+        args.random_seed = rseed
 
     # init device
     device = fedml.device.get_device(args)
