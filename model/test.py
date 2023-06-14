@@ -6,7 +6,7 @@ import torch.nn as nn
 
 from torch.utils.data import DataLoader
 
-from model.model import GRUModel
+from model.model import GRUModel, LSTMModel
 from model.utils import store_test_metrics
 from model.utils import MSLELoss, Metrics, eICU_Loader
 
@@ -23,7 +23,11 @@ def test(args, central=True):
     model_path = os.path.join(model_dir, 'trained_model')
 
     #load the model
-    model = GRUModel(args.input_dim, args.hidden_dim, args.num_layers, args.output_dim, args.dropout_prob).to(device)
+    if args.model == 'GRU':
+        model = GRUModel(args.input_dim, args.hidden_dim, args.num_layers, args.output_dim, args.dropout_prob).to(device)
+    elif args.model == 'LSTM':
+        model = LSTMModel(args.input_dim, args.hidden_dim, args.num_layers, args.output_dim, args.dropout_prob).to(device)
+    
     model.load_state_dict(torch.load(model_path))
     
     #data loaders

@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+#PBS -l nodes=1:ppn=36:skylake
+#PBS -l walltime=20:00:00
+#PBS -l partition=bigmem
+#PBS -l pmem=20gb
+#PBS -A lp_graph_los_fedlearn
+#PBS -N fed_los_bench
+#PBS -m abe
+#PBS -o fed_los_bench.$PBS_JOBID.stdout
+#PBS -e fed_los_bench.$PBS_JOBID.stderr
+#PBS -M vincent.scheltjens@kuleuven.be
+
+cd $VSC_DATA/eicu-cl-req
+
+export PATH="${VSC_DATA}/miniconda3/bin:${PATH}"
+
+source activate clreq
+
+for i in {1..16};
+    do
+        -m central_training.central --cf /data/leuven/345/vsc34578/eicu-cl-req/distributed_training/config_vsc.yml;
+        echo success;
+    done
+
+echo Finished

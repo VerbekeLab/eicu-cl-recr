@@ -44,3 +44,37 @@ class GRUModel(nn.Module):
         return out
 
 
+class LSTMModel(nn.Module):
+    def __init__(self, input_dim, hidden_dim, num_layers, output_dim, dropout_prob): 
+        super(LSTMModel, self).__init__() 
+
+        self.num_layers = num_layers
+        self.hidden_dim = hidden_dim
+        self.input_dim = input_dim
+        self.output_dim = output_dim
+        self.dropout_prob = dropout_prob
+        self.lstm = nn.LSTM(input_dim, hidden_dim, num_layers, dropout=dropout_prob, batch_first=True) 
+
+        self.fc = nn.Linear(hidden_dim, output_dim)
+        self.lstm_dropout = nn.Dropout(p=dropout_prob)      
+        self.batch_norm = nn.BatchNorm1d(output_dim)  
+        self.relu = nn.ReLU()
+
+    def init_hidden(self, bsize):
+        return torch.nn.init.orthogonal_(torch.randn(self.num_layers, bsize, self.hidden_dim)).to(device)
+
+    def forward(self, inputs):
+
+        # jnit hidden states for LSTM
+        self.hidden = self.init_hidden(inputs.size(0))
+        self.cell_state = self.init_hidden(inputs.size(0))
+
+        # inputs are of the shape [batch_size, seq_length, features]
+        outputs, (hidden, cn) = self.lstm(inputs, (self.hidden, self.cell_state))  
+
+        out = self.lstm_dropout(outputs)
+        out = self.fc(out[:, -1, :])               
+        out = self.batch_norm(out)                
+        outputs = self.relu(out)
+
+        return outputs

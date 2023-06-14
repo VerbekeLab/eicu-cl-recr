@@ -6,7 +6,7 @@ from datetime import datetime
 
 from torch.utils.data import DataLoader
 
-from model.model import GRUModel
+from model.model import GRUModel, LSTMModel
 
 from model.utils import MSLELoss
 from model.utils import Metrics
@@ -34,7 +34,11 @@ def train(args):
     valid_loader = DataLoader(valid_set, args.batch_size, shuffle=True, drop_last=False)
 
     #model, optimizer and loss
-    model = GRUModel(args.input_dim, args.hidden_dim, args.num_layers, args.output_dim, args.dropout_prob).to(device)
+    if args.model == 'GRU':
+        model = GRUModel(args.input_dim, args.hidden_dim, args.num_layers, args.output_dim, args.dropout_prob).to(device)
+    elif args.model == 'LSTM':
+        model = LSTMModel(args.input_dim, args.hidden_dim, args.num_layers, args.output_dim, args.dropout_prob).to(device)
+    
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.learning_rate , weight_decay=args.weight_decay)
     loss_fn = MSLELoss()
 

@@ -6,6 +6,8 @@ clreq.pbs
 scrap.ipynb
 wandbkey.txt
 distributed_training/config_vsc.yml
+distributed_training/config.yml
+CLRECR_FL_SummarySlides.pptx
 
 
 #Data Folders
@@ -13,3 +15,5 @@ eICU_Data/
 wandb/
 figures/
 toy-implementation/
+ICML/
+IJCNN/

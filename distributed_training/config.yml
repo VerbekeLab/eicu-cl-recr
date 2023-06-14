@@ -1,7 +1,8 @@
 common_args:
   training_type: "simulation"
-  random_seed: 0
+  random_seed: 'None'
   client_selection_seed: False
+  experiment: False
 
 data_args:
   dataset: "ICU"
@@ -23,7 +24,7 @@ train_args:
   federated_optimizer: "FedAvg"
   client_id_list: "[]"
   client_num_in_total: 3
-  client_num_per_round: 3
+  client_num_per_round: 2
   comm_round: 5
   epochs: 2
   batch_size: 128
@@ -32,7 +33,7 @@ train_args:
   weight_decay: 0.005
 
 cl_recruitment_args:
-  recruitment: False
+  recruitment: True
   div_weight: 0.5
   inst_weight: 0.5
   repr_perc: 0.2
